@@ -1,0 +1,13 @@
+zuul:
+  routes:
+    account:
+      path: /class-management/**
+      serviceId: http://localhost:7000
+      stripPrefix: true
+    customer:
+      path: /course/**
+      url: http://localhost:6000
+      stripPrefix: false
+
+server:
+  port: 5000
