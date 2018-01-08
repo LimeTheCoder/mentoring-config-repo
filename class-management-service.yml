@@ -2,6 +2,9 @@ logging:
   level:
     org.hibernate: ERROR
 
+server:
+  port: 7000
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/class-management?verifyServerCertificate=false&useSSL=true
