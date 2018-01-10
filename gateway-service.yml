@@ -2,12 +2,18 @@ zuul:
   routes:
     account:
       path: /class-management/**
-      serviceId: http://localhost:7000
+      serviceId: class-management-service
       stripPrefix: true
     customer:
       path: /course/**
-      url: http://localhost:6000
+      serviceId: course-service
       stripPrefix: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false
 
 server:
   port: 5000
