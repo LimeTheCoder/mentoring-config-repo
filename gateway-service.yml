@@ -1,13 +1,20 @@
 zuul:
   routes:
-    account:
+    auth-service:
+      path: /uaa/**
+      serviceId: auth-service
+      stripPrefix: false
+      sensitiveHeaders:
+    class-management:
       path: /class-management/**
       serviceId: class-management-service
       stripPrefix: true
-    customer:
+      sensitiveHeaders:
+    course:
       path: /course/**
       serviceId: course-service
       stripPrefix: false
+      sensitiveHeaders:
 
 eureka:
   client:
